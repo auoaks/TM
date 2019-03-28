@@ -30,7 +30,6 @@ TRANSITION:
 	10 9     LEFT
 	4 12 ` ` RIGHT
 	12 12 ~ ~ RIGHT
-	12 5 ` ( RIGHT
 	18 0 ( ` LEFT
 	10 19 ` ` LEFT
 	19 19 ~ ~ LEFT
@@ -38,6 +37,7 @@ TRANSITION:
 	19 3     LEFT
 	3 3 ~ ~ LEFT
 	3 1     LEFT
+	12 5 ` ( STAY
 
 // Tape format: tapeChar(0) tapeChar(1) ... tapeChar(n)
 TAPE:

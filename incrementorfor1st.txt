@@ -42,7 +42,6 @@ TRANSITION:
 	98 96     LEFT
 	101 105 ` ` RIGHT
 	105 105 ~ ~ RIGHT
-	105 106 ` ( RIGHT
 	98 100 ` ` LEFT
 	102 107   0 LEFT
 	107 111 0   LEFT
@@ -66,6 +65,7 @@ TRANSITION:
 	19 97 ( ` LEFT
 	104 102 0 1 LEFT
 	102 104 1 0 LEFT
+	105 106 ` ( STAY
 
 // Tape format: tapeChar(0) tapeChar(1) ... tapeChar(n)
 TAPE:
