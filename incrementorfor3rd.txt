@@ -1,0 +1,45 @@
+// Save File for STEM
+// Version 1.00
+
+// State Format: name x y start accept
+STATES:
+	0 103.000000 108.000000 false false 0.980392 0.980392 0.823529 1.000000
+	1 503.000000 105.000000 false false 0.980392 0.980392 0.823529 1.000000
+	2 611.000000 116.000000 false false 0.980392 0.980392 0.823529 1.000000
+	4 804.000000 131.000000 false false 0.980392 0.980392 0.823529 1.000000
+	5 1130.000000 184.000000 false true 0.980392 0.980392 0.823529 1.000000
+	9 210.000000 189.000000 false false 0.980392 0.980392 0.823529 1.000000
+	10 288.000000 258.000000 false false 0.980392 0.980392 0.823529 1.000000
+	12 950.000000 140.000000 false false 0.980392 0.980392 0.823529 1.000000
+	18 61.000000 236.000000 true false 0.980392 0.980392 0.823529 1.000000
+	19 370.000000 126.000000 false false 0.980392 0.980392 0.823529 1.000000
+	3 461.000000 222.000000 false false 0.980392 0.980392 0.823529 1.000000
+
+// Transition format: fromStateId toStateId readCHar writeChar moveDirection
+// The Character '~' is the catchall character
+TRANSITION:
+	1 2 0 1 RIGHT
+	1 1 1 0 LEFT
+	2 2 ~ ~ RIGHT
+	2 4 ` ` RIGHT
+	4 4 ~ ~ RIGHT
+	0 0 ~ ~ LEFT
+	0 9 ` ` LEFT
+	9 10 0 0 LEFT
+	9 10 1 1 LEFT
+	10 9     LEFT
+	4 12 ` ` RIGHT
+	12 12 ~ ~ RIGHT
+	12 5 ` ( RIGHT
+	18 0 ( ` LEFT
+	10 19 ` ` LEFT
+	19 19 ~ ~ LEFT
+	1 2   1 RIGHT
+	19 3     LEFT
+	3 3 ~ ~ LEFT
+	3 1     LEFT
+
+// Tape format: tapeChar(0) tapeChar(1) ... tapeChar(n)
+TAPE:
+	33
+	100000 1001101 1010`0 0 0`kjshdf( 
